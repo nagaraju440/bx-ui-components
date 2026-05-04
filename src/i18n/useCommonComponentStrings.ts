@@ -17,16 +17,24 @@ const getLocaleCandidates = (locale: string): string[] => {
   ].filter(Boolean);
 };
 
+const getLocaleFromPathname = (pathname: string): string | undefined => {
+  return pathname
+    .split("/")
+    .filter(Boolean)
+    .map((segment) => decodeURIComponent(segment).toLowerCase())
+    .find((segment) => commonComponentStrings[segment]);
+};
+
 const getLocaleFromUrl = (): string => {
   if (typeof window === "undefined") {
     return DEFAULT_LOCALE;
   }
 
-  const firstPathSegment = window.location.pathname
-    .split("/")
-    .filter(Boolean)[0];
-
-  return firstPathSegment || document.documentElement.lang || DEFAULT_LOCALE;
+  return (
+    getLocaleFromPathname(window.location.pathname) ||
+    document.documentElement.lang ||
+    DEFAULT_LOCALE
+  );
 };
 
 const subscribeToLocale = () => {

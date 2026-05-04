@@ -81,10 +81,19 @@ Common component strings do not depend on the consuming app's `getStaticProps`, 
 The flow is:
 
 1. A component calls `useCommonComponentStrings()`.
-2. The hook reads the locale from the first URL segment, for example `/ca-fr/sample` gives `ca-fr`.
+2. The hook reads the locale from the URL path by finding the first path segment that matches a supported locale folder.
 3. It looks up that locale from the bundled locale data imported by `src/i18n/locales.ts`.
 4. If the exact locale is missing, it tries a broader match and then falls back to `en`.
 5. The component renders plain translated text.
+
+Examples:
+
+```txt
+/ca-fr/sample -> ca-fr
+/marketing/ca-fr/sample -> ca-fr
+```
+
+This supports consuming apps that use a Next.js `basePath`, such as `/marketing`. The base path is ignored because it is not a locale folder.
 
 Each locale folder contains only:
 
