@@ -2,7 +2,6 @@
 
 import GetScrollTypesAlert from "@components/GetScrollAlert";
 import DropDownArrow from "@public/assets/DropDownArrow";
-import { uniqBy } from "lodash";
 import { X } from "lucide-react";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
@@ -21,6 +20,19 @@ import {
 
 // Define the shape of each data item
 export type DataItem = Record<"value" | "label", string>;
+
+const uniqByValue = (items: DataItem[]) => {
+  const seen = new Set<string>();
+
+  return items.filter((item) => {
+    if (seen.has(item.value)) {
+      return false;
+    }
+
+    seen.add(item.value);
+    return true;
+  });
+};
 
 // Main MultiSelect component
 export function MultiSelect({
@@ -100,7 +112,7 @@ export function MultiSelect({
         typeof obj.value === "string" ? obj.value : JSON.stringify(obj.value),
     };
   });
-  const filteredData = uniqBy(modifiedData, "value");
+  const filteredData = uniqByValue(modifiedData);
 
   // Refs to manage focus and detect clicks outside the component
   const dropdownRef = React.useRef<(HTMLElement | null)[]>([]);

@@ -1,4 +1,3 @@
-import { debounce } from "lodash";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 
@@ -8,6 +7,18 @@ interface GetScrollTypesAlertProps {
   onBottom: () => void;
   onTop?: () => void;
 }
+
+const debounce = (callback: () => void, wait: number) => {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+
+  return () => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(callback, wait);
+  };
+};
 
 const GetScrollTypesAlert: React.FC<GetScrollTypesAlertProps> = ({
   id,

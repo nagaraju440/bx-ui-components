@@ -1,4 +1,3 @@
-import { isArray } from "lodash";
 import { cn } from "src/lib/utils";
 /**
  * This function currently we can use in input, select, multiselect
@@ -22,7 +21,7 @@ const isValueValid = (value: string | undefined | any[]) => {
     value == undefined ||
     value === "" ||
     value === null ||
-    (isArray(value) && value.length === 0)
+    (Array.isArray(value) && value.length === 0)
   ) {
     return false;
   }
