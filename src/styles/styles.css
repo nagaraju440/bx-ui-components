@@ -1,0 +1,575 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tailwind.css or a custom CSS file */
+@layer components {
+  /* Custom class to remove spinner arrows in WebKit browsers (like Chrome and Safari) EX: Remove arrows from Input type number */
+  .no-input-arrow::-webkit-inner-spin-button,
+  .no-input-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-input-arrow {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Custom thin scrollbar */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  /* background: red; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7677f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7677f4;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+.custom-links a {
+  @apply text-primary;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #d6d7d8;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #7677f4;
+  border-radius: 100vh;
+  border: 1px solid #7677f4;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7677f4;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chart-inner-text {
+  position: absolute;
+  top: 7;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 20%;
+  text-align: center;
+  font-size: 13px;
+}
+
+.chart-inner-value {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  color: black;
+}
+
+.loader {
+  width: 40px;
+  padding: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #334bfa 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #334bfa);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.logo-loading {
+  animation: logo-pulse 2s ease-in-out infinite;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  :root {
+    /* default values for light mode */
+    /* Primary */
+    /* Light Colors */
+    --color-primary-light: #f1f1fe; /* Light */
+    --color-primary-light-hover: #eaebfd; /* Light :hover */
+    --color-primary-light-active: #d5d5fc; /* Light :active */
+
+    /* Primary Colors */
+    --color-primary: #7677f4; /* Primary */
+    --color-primary-hover: #6a6bdc; /* Normal :hover */
+    --color-primary-active: #5e5fc3; /* Normal :active */
+
+    /* Dark Colors */
+    --color-primary-dark: #5959b7; /* Dark */
+    --color-primary-dark-hover: #474792; /* Dark :hover */
+    --color-primary-dark-active: #35366e; /* Dark :active */
+
+    /* Darker Colors */
+    --color-primary-darker: #292a55; /* Darker */
+
+    /* Grey */
+    --color-grey-light: #ebebeb; /* Light */
+    --color-grey-light-hover: #e0e0e0; /* Light Hover */
+    --color-grey-light-active: #c0c0c0; /* Light Active */
+    --color-grey: #333333; /* Normal */
+    --color-grey-hover: #2e2e2e; /* Normal Hover */
+    --color-grey-active: #292929; /* Normal Active */
+    --color-grey-dark: #262626; /* Dark */
+    --color-grey-dark-hover: #1f1f1f; /* Dark Hover */
+    --color-grey-dark-active: #171717; /* Dark Active */
+    --color-grey-darker: #121212; /* Darker */
+
+    /* Grey1 */
+    --color-grey1-light: #f0f0f0; /* Light */
+    --color-grey1-light-hover: #e8e8e8; /* Light Hover */
+    --color-grey1-light-active: #d0d0d0; /* Light Active */
+    --color-grey1: #666666; /* Normal */
+    --color-grey1-hover: #5c5c5c; /* Normal Hover */
+    --color-grey1-active: #525252; /* Normal Active */
+    --color-grey1-dark: #4d4d4d; /* Dark */
+    --color-grey1-dark-hover: #3d3d3d; /* Dark Hover */
+    --color-grey1-dark-active: #2e2e2e; /* Dark Active */
+    --color-grey1-darker: #242424; /* Darker */
+
+    /* Grey2 */
+    --color-grey2-light: #f5f5f5; /* Light */
+    --color-grey2-light-hover: #f0f0f0; /* Light Hover */
+    --color-grey2-light-active: #dfdfdf; /* Light Active */
+    --color-grey2: #999999; /* Normal */
+    --color-grey2-hover: #8a8a8a; /* Normal Hover */
+    --color-grey2-active: #7a7a7a; /* Normal Active */
+    --color-grey2-dark: #737373; /* Dark */
+    --color-grey2-dark-hover: #5c5c5c; /* Dark Hover */
+    --color-grey2-dark-active: #454545; /* Dark Active */
+    --color-grey2-darker: #363636; /* Darker */
+
+    /* Green */
+    --color-green-light: #e8f7ee; /* Light */
+    --color-green-light-hover: #dcf3e5; /* Light Hover */
+    --color-green-light-active: #b6e6ca; /* Light Active */
+    --color-green: #15af53; /* Normal */
+    --color-green-hover: #139e4b; /* Normal Hover */
+    --color-green-active: #118c42; /* Normal Active */
+    --color-green-dark: #10833e; /* Dark */
+    --color-green-dark-hover: #0d6932; /* Dark Hover */
+    --color-green-dark-active: #094f25; /* Dark Active */
+    --color-green-darker: #073d1d; /* Darker */
+
+    /* Yellow */
+    --color-yellow-light: #fff9e6; /* Light */
+    --color-yellow-light-hover: #fff6da; /* Light Hover */
+    --color-yellow-light-active: #ffecb2; /* Light Active */
+    --color-yellow: #ffc107; /* Normal */
+    --color-yellow-hover: #e6ae06; /* Normal Hover */
+    --color-yellow-active: #cc9a06; /* Normal Active */
+    --color-yellow-dark: #bf9105; /* Dark */
+    --color-yellow-dark-hover: #997404; /* Dark Hover */
+    --color-yellow-dark-active: #735703; /* Dark Active */
+    --color-yellow-darker: #594402; /* Darker */
+
+    /* Orange */
+    --color-orange-light: #fff2e8; /* Light */
+    --color-orange-light-hover: #ffecdc; /* Light Hover */
+    --color-orange-light-active: #fed7b6; /* Light Active */
+    --color-orange: #fd7e14; /* Normal */
+    --color-orange-hover: #e47112; /* Normal Hover */
+    --color-orange-active: #ca6510; /* Normal Active */
+    --color-orange-dark: #be5f0f; /* Dark */
+    --color-orange-dark-hover: #984c0c; /* Dark Hover */
+    --color-orange-dark-active: #723909; /* Dark Active */
+    --color-orange-darker: #592c07; /* Darker */
+
+    /* Red */
+    --color-red-light: #fcebec; /* Light */
+    --color-red-light-hover: #fae1e3; /* Light Hover */
+    --color-red-light-active: #f4c0c5; /* Light Active */
+    --color-red: #dc3545; /* Normal */
+    --color-red-hover: #c6303e; /* Normal Hover */
+    --color-red-active: #b02a37; /* Normal Active */
+    --color-red-dark: #a52834; /* Dark */
+    --color-red-dark-hover: #842029; /* Dark Hover */
+    --color-red-dark-active: #63181f; /* Dark Active */
+    --color-red-darker: #4d1318; /* Darker */
+
+    /* Stroke */
+    --stroke: #e0e0e0; /* Normal */
+
+    /* Background */
+    --background: #f5f5f5; /* Background */
+
+    /* Keyboard Tab */
+    --keyboard-tab: #2c2c7d; /* Keyboard Tab Normal */
+
+    /* Box shadow */
+    --box-shadow-color: rgba(0, 0, 0, 0.1); /* 10% black */
+
+    /* TODO: remove these after repo cleansing*/
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Values for Dark mode */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* text editor styles */
+
+.ProseMirror {
+  padding: 10px;
+  border-radius: 16px;
+  border-width: 1px;
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-color: #d6d7d8;
+}
+
+.ProseMirror ul {
+  padding: 0 1rem;
+  list-style: disc !important;
+}
+.ProseMirror ol {
+  padding: 0 2rem;
+  list-style: decimal !important;
+}
+
+.ProseMirror code {
+  background-color: rgba(#616161, 0.1);
+  color: #616161;
+}
+
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.ProseMirror code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+/* Unvisited link within .ProseMirror */
+.ProseMirror a:link {
+  color: #0000ee; /* Blue */
+  text-decoration: underline;
+}
+
+/* Visited link within .ProseMirror */
+.ProseMirror a:visited {
+  color: #551a8b; /* Purple */
+  text-decoration: underline;
+}
+
+/* Mouse over link within .ProseMirror */
+.ProseMirror a:hover {
+  color: #0000ee; /* Blue */
+  text-decoration: underline;
+}
+
+/* Selected link within .ProseMirror */
+.ProseMirror a:active {
+  color: #ff0000; /* Red */
+  text-decoration: underline;
+}
+
+/* Focused link within .ProseMirror */
+.ProseMirror a:focus {
+  outline: 1px dotted; /* or another outline style */
+}
+
+.ProseMirror blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid #999999;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 3px solid #999999;
+  margin: 2rem 0;
+}
+
+/* Heading styles */
+.ProseMirror h1,
+h2,
+h3 {
+  line-height: 1.1;
+  text-wrap: pretty;
+}
+
+.ProseMirror h1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.ProseMirror h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ProseMirror h3 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Invisible scrollbar stylings */
+.text-editor-languages-custom-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.loader-small {
+  transform: scale(
+    0.8
+  ); /* 
+  This scales down the loader to 60% of its original size. 
+  We use this class to adjust the size of the loader without modifying the global .loader styles. 
+  This ensures that the global loader size remains consistent across the application, 
+  while allowing us to display a smaller loader in specific contexts where a smaller size is needed. 
+  */
+}
+
+/* Add this CSS to your stylesheet */
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.ReactCrop__crop-selection {
+  outline: 1px white;
+  touch-action: auto;
+}
+
+.page-break-avoid {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.ReactCrop__crop-selection:focus {
+  outline: 1px dashed white !important;
+}
+
+.black-text * {
+  color: black !important;
+}
+
+.grey-text * {
+  color: #666666 !important;
+  text-decoration: none !important; /* No underline */
+  font-style: normal !important; /* Set font style */
+  font-weight: 500 !important; /* Set font weight */
+  font-size: 16px !important; /* Set font size */
+}
+
+.phone-number-component {
+  --dynamic-width: 100px;
+}
+
+.phone-number-component ul {
+  max-height: 270px !important;
+  width: var(--dynamic-width);
+  border-radius: 16px;
+  border-color: #d6d7d8;
+  padding: 0 5px !important;
+}
+
+.phone-number-component div {
+  border-bottom-width: 1px !important;
+  border-color: #d6d7d8 !important;
+}
+
+.phone-number-component ul li {
+  border-bottom-width: 1px !important;
+  border-color: #d6d7d8 !important;
+  margin: 0 !important;
+  padding: 9.5px 10px !important;
+}
+
+.phone-number-component ul li:hover,
+.phone-number-component ul li:focus {
+  background-color: rgba(118, 119, 244, 0.1) !important;
+}
+
+.phone-number-component > ul:first-of-type > div:first-of-type {
+  max-height: 270px !important;
+  padding-top: 5px;
+}
+
+.caf-instructions h2 {
+  font-weight: bold;
+}
+
+/* we have column selector in base table wehere we need to make it responsive because the dialog component is using overflow-none */
+@media (min-height: 680px) {
+  .column-selector-responsive-container {
+    max-height: 300px;
+  }
+}
+
+@media (max-height: 679px) {
+  .column-selector-responsive-container {
+    max-height: 250px;
+  }
+}
+
+@media (max-height: 635px) {
+  .column-selector-responsive-container {
+    max-height: 200px;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* TODO : Temp fix for the cursor issue because of dialog  PF-7864 */
+body {
+  pointer-events: auto !important;
+}

@@ -1,0 +1,191 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Documentation/Common Components" />
+
+# BX UI Components
+
+`bx-ui-components` is the shared component library for BX frontend projects. It provides reusable React UI components, shared styles, Storybook documentation, and component-owned translation strings.
+
+## How Translations Work
+
+Common component text is loaded from this package, not from the consuming app.
+
+The component calls `useCommonComponentStrings()`, the hook reads the locale from the first URL segment, and it resolves that locale from the package locale folders. For example, `/ca-fr/sample` uses `ca-fr`.
+
+The fallback order is exact locale, partial locale, and then `en`.
+
+## Locale File Shape
+
+Every package locale folder contains one file only:
+
+```txt
+locales/<locale>/common-components-strings.json
+```
+
+The `locales` folder is the source of truth. `src/i18n/locales.ts` only imports those locale files so the package can bundle them for React and Next.js apps.
+
+The component library should not ship app namespaces such as `bx_v1.json`, `common.json`, or `course.find_course.json`.
+
+## String-Aware Components
+
+These components currently use component-owned strings:
+
+| Component | String keys |
+| --- | --- |
+| `BaseTable` | `baseTable.*`, `common.apply` |
+| `MultiSelect` | `multiSelect.add`, `select.*` |
+| `MVPSelect*` | `select.*` |
+| `CustomSelect` | `customSelect.*` |
+| `BarChart` | `barChart.*` |
+| `DiscountCodeInput` | `discountCode.*` |
+| `CourseDiscountCodeInput` | `discountCode.*` |
+| `DateOfBirthSelector` | `dateOfBirth.placeholder` |
+| `MultiLingualSupportInputs` | `common.enter`, `common.cancel`, `common.save` |
+| `DialogContent` | `dialog.close` |
+| `SidebarTrigger`, `SidebarRail` | `sidebar.toggle` |
+| `RouteChangeAlertPopUp` | `routeChange.*`, `common.cancel`, `common.ok` |
+| `TipTapToolbar` | `textEditor.*` |
+
+## Component Catalog
+
+### Form And Input
+
+- `Button`
+- `Input`
+- `Textarea`
+- `Checkbox`
+- `Switch`
+- `RadioGroup`
+- source: `radio-group`
+- `RadioButtonCard`
+- `Label`
+- `Form`
+- `DateField`
+- `DateCalendar`
+- `DateRangePicker`
+- `DateOfBirthSelector`
+- `DobCalendar`
+- `MultiLingualSupportInputs`
+- source: `MultiLingualInputs`
+
+### Selection And Commands
+
+- `Select`
+- `MVPSelect`
+- `MVPSelectTrigger`
+- `MVPSelectInput`
+- `MVPSelectContent`
+- `MVPSelectItems`
+- `MVPSelectItem`
+- `MVPSelectEmpty`
+- `MVPSelectLoading`
+- `MVPSelectSeparator`
+- `MultiSelect`
+- source: `multi-select`
+- `CustomSelect`
+- source: `custom-select`
+- `Command`
+- source: `SelectCommand`
+
+### Layout And Overlay
+
+- `Accordion`
+- `Alert`
+- `AlertDialog`
+- source: `alert-dialog`
+- `Dialog`
+- `DropdownMenu`
+- source: `dropdown-menu`
+- `HoverCard`
+- source: `hover-card`
+- `NavigationMenu`
+- source: `navigation-menu`
+- `Popover`
+- `ScrollArea`
+- source: `scroll-area`
+- `Separator`
+- `Sheet`
+- `Sidebar`
+- `Tabs`
+- `Tooltip`
+- `Card`
+
+### Data Display
+
+- `BaseTable`
+- `Table`
+- `TableHeader`
+- `TableBody`
+- `TableFooter`
+- `TableHead`
+- `TableRow`
+- `TableCell`
+- `TableCaption`
+- `Badge`
+- `Avatar`
+- `Text`
+- `TextTags`
+- `SortingArrows`
+- `SlashIcon`
+
+### Charts And Rich Text
+
+- `BarChart`
+- source: `bar-chart`
+- `VerticalBarChart`
+- source: `vertical-bar-chart`
+- `Chart`
+- `TipTapEditor`
+- `TipTapToolbar`
+
+### Business Components
+
+- `DiscountCodeInput`
+- `CourseDiscountCodeInput`
+- `RouteChangeAlertPopUp`
+
+These components may need app adapters such as HTTP client, static data, or text editor upload configuration.
+
+## Local Commands
+
+```bash
+npm install
+npm run storybook
+npm run typecheck
+npm run build
+npm run pack:local
+```
+
+## Story Coverage
+
+Storybook includes grouped stories for every shared UI component source file in `src/ui`, plus a dedicated `BaseTable` story with sample data and pagination.
+
+The grouped story sections are:
+
+- `Common Components/Form Controls`
+- `Common Components/Selection`
+- `Common Components/Overlay And Navigation`
+- `Common Components/Data Display`
+- `Common Components/Date Components`
+- `Common Components/Charts Editor And Business`
+- `Components/BaseTable`
+- `UI/Button`
+- `UI/Input`
+
+## Local Consumer Test
+
+```bash
+cd ../bx-ui-components
+npm run build
+npm run pack:local
+
+cd ../bx-fe
+npm install ../bx-ui-components/bx-ui-components-0.1.0.tgz
+npm run dev
+```
+
+Open:
+
+```txt
+http://localhost:2000/ca-fr/sample
+```

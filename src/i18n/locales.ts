@@ -1,0 +1,375 @@
+﻿type LocaleStrings = Record<string, string>;
+type StringsByLocale = Record<string, LocaleStrings>;
+
+import locale0 from "../../locales/ad-ca/common-components-strings.json";
+import locale1 from "../../locales/ad-en/common-components-strings.json";
+import locale2 from "../../locales/ad-es/common-components-strings.json";
+import locale3 from "../../locales/ae-ar/common-components-strings.json";
+import locale4 from "../../locales/ae-en/common-components-strings.json";
+import locale5 from "../../locales/al-en/common-components-strings.json";
+import locale6 from "../../locales/al-sq/common-components-strings.json";
+import locale7 from "../../locales/am-en/common-components-strings.json";
+import locale8 from "../../locales/am-hy/common-components-strings.json";
+import locale9 from "../../locales/ar-en/common-components-strings.json";
+import locale10 from "../../locales/ar-es/common-components-strings.json";
+import locale11 from "../../locales/at-de/common-components-strings.json";
+import locale12 from "../../locales/at-en/common-components-strings.json";
+import locale13 from "../../locales/au-en/common-components-strings.json";
+import locale14 from "../../locales/az-az/common-components-strings.json";
+import locale15 from "../../locales/az-en/common-components-strings.json";
+import locale16 from "../../locales/az-ru/common-components-strings.json";
+import locale17 from "../../locales/ba-bs/common-components-strings.json";
+import locale18 from "../../locales/ba-en/common-components-strings.json";
+import locale19 from "../../locales/ba-hr/common-components-strings.json";
+import locale20 from "../../locales/be-en/common-components-strings.json";
+import locale21 from "../../locales/be-fr/common-components-strings.json";
+import locale22 from "../../locales/be-nl/common-components-strings.json";
+import locale23 from "../../locales/bg-bg/common-components-strings.json";
+import locale24 from "../../locales/bg-en/common-components-strings.json";
+import locale25 from "../../locales/bh-de/common-components-strings.json";
+import locale26 from "../../locales/bh-en/common-components-strings.json";
+import locale27 from "../../locales/bo-en/common-components-strings.json";
+import locale28 from "../../locales/bo-es/common-components-strings.json";
+import locale29 from "../../locales/br-en/common-components-strings.json";
+import locale30 from "../../locales/br-pt/common-components-strings.json";
+import locale31 from "../../locales/bt-dz/common-components-strings.json";
+import locale32 from "../../locales/bt-en/common-components-strings.json";
+import locale33 from "../../locales/bw-en/common-components-strings.json";
+import locale34 from "../../locales/by-be/common-components-strings.json";
+import locale35 from "../../locales/by-en/common-components-strings.json";
+import locale36 from "../../locales/by-ru/common-components-strings.json";
+import locale37 from "../../locales/ca-en/common-components-strings.json";
+import locale38 from "../../locales/ca-fr/common-components-strings.json";
+import locale39 from "../../locales/ch-de/common-components-strings.json";
+import locale40 from "../../locales/ch-en/common-components-strings.json";
+import locale41 from "../../locales/ch-fr/common-components-strings.json";
+import locale42 from "../../locales/ch-it/common-components-strings.json";
+import locale43 from "../../locales/cl-en/common-components-strings.json";
+import locale44 from "../../locales/cl-es/common-components-strings.json";
+import locale45 from "../../locales/co-en/common-components-strings.json";
+import locale46 from "../../locales/co-es/common-components-strings.json";
+import locale47 from "../../locales/cr-en/common-components-strings.json";
+import locale48 from "../../locales/cr-es/common-components-strings.json";
+import locale49 from "../../locales/cy-el/common-components-strings.json";
+import locale50 from "../../locales/cy-en/common-components-strings.json";
+import locale51 from "../../locales/cy-ru/common-components-strings.json";
+import locale52 from "../../locales/cz-cs/common-components-strings.json";
+import locale53 from "../../locales/cz-en/common-components-strings.json";
+import locale54 from "../../locales/de-de/common-components-strings.json";
+import locale55 from "../../locales/de-en/common-components-strings.json";
+import locale56 from "../../locales/dk-da/common-components-strings.json";
+import locale57 from "../../locales/dk-en/common-components-strings.json";
+import locale58 from "../../locales/do-en/common-components-strings.json";
+import locale59 from "../../locales/do-es/common-components-strings.json";
+import locale60 from "../../locales/ee-en/common-components-strings.json";
+import locale61 from "../../locales/ee-et/common-components-strings.json";
+import locale62 from "../../locales/ee-ru/common-components-strings.json";
+import locale63 from "../../locales/eg-en/common-components-strings.json";
+import locale64 from "../../locales/en/common-components-strings.json";
+import locale65 from "../../locales/es-en/common-components-strings.json";
+import locale66 from "../../locales/es-es/common-components-strings.json";
+import locale67 from "../../locales/eu-en/common-components-strings.json";
+import locale68 from "../../locales/fi-en/common-components-strings.json";
+import locale69 from "../../locales/fi-fi/common-components-strings.json";
+import locale70 from "../../locales/fr-en/common-components-strings.json";
+import locale71 from "../../locales/fr-fr/common-components-strings.json";
+import locale72 from "../../locales/gb-en/common-components-strings.json";
+import locale73 from "../../locales/ge-en/common-components-strings.json";
+import locale74 from "../../locales/ge-ka/common-components-strings.json";
+import locale75 from "../../locales/gl-da/common-components-strings.json";
+import locale76 from "../../locales/gl-en/common-components-strings.json";
+import locale77 from "../../locales/gr-el/common-components-strings.json";
+import locale78 from "../../locales/gr-en/common-components-strings.json";
+import locale79 from "../../locales/hk-en/common-components-strings.json";
+import locale80 from "../../locales/hk-zh/common-components-strings.json";
+import locale81 from "../../locales/hr-en/common-components-strings.json";
+import locale82 from "../../locales/hr-hr/common-components-strings.json";
+import locale83 from "../../locales/hu-en/common-components-strings.json";
+import locale84 from "../../locales/hu-hu/common-components-strings.json";
+import locale85 from "../../locales/id-en/common-components-strings.json";
+import locale86 from "../../locales/ie-en/common-components-strings.json";
+import locale87 from "../../locales/il-en/common-components-strings.json";
+import locale88 from "../../locales/il-he/common-components-strings.json";
+import locale89 from "../../locales/is-en/common-components-strings.json";
+import locale90 from "../../locales/is-is/common-components-strings.json";
+import locale91 from "../../locales/it-en/common-components-strings.json";
+import locale92 from "../../locales/it-it/common-components-strings.json";
+import locale93 from "../../locales/jm-en/common-components-strings.json";
+import locale94 from "../../locales/jo-en/common-components-strings.json";
+import locale95 from "../../locales/jp-en/common-components-strings.json";
+import locale96 from "../../locales/jp-ja/common-components-strings.json";
+import locale97 from "../../locales/kh-en/common-components-strings.json";
+import locale98 from "../../locales/kh-km/common-components-strings.json";
+import locale99 from "../../locales/ks-en/common-components-strings.json";
+import locale100 from "../../locales/ks-sq/common-components-strings.json";
+import locale101 from "../../locales/kw-en/common-components-strings.json";
+import locale102 from "../../locales/la-en/common-components-strings.json";
+import locale103 from "../../locales/la-lo/common-components-strings.json";
+import locale104 from "../../locales/lb-en/common-components-strings.json";
+import locale105 from "../../locales/lt-en/common-components-strings.json";
+import locale106 from "../../locales/lt-lt/common-components-strings.json";
+import locale107 from "../../locales/lt-ru/common-components-strings.json";
+import locale108 from "../../locales/lu-en/common-components-strings.json";
+import locale109 from "../../locales/lu-fr/common-components-strings.json";
+import locale110 from "../../locales/lv-en/common-components-strings.json";
+import locale111 from "../../locales/lv-lv/common-components-strings.json";
+import locale112 from "../../locales/lv-ru/common-components-strings.json";
+import locale113 from "../../locales/ma-en/common-components-strings.json";
+import locale114 from "../../locales/ma-fr/common-components-strings.json";
+import locale115 from "../../locales/mc-en/common-components-strings.json";
+import locale116 from "../../locales/mc-fr/common-components-strings.json";
+import locale117 from "../../locales/md-en/common-components-strings.json";
+import locale118 from "../../locales/md-ro/common-components-strings.json";
+import locale119 from "../../locales/me-en/common-components-strings.json";
+import locale120 from "../../locales/me-sr/common-components-strings.json";
+import locale121 from "../../locales/mk-en/common-components-strings.json";
+import locale122 from "../../locales/mk-mk/common-components-strings.json";
+import locale123 from "../../locales/mm-en/common-components-strings.json";
+import locale124 from "../../locales/mm-my/common-components-strings.json";
+import locale125 from "../../locales/mn-en/common-components-strings.json";
+import locale126 from "../../locales/mt-en/common-components-strings.json";
+import locale127 from "../../locales/mt-it/common-components-strings.json";
+import locale128 from "../../locales/mt-mt/common-components-strings.json";
+import locale129 from "../../locales/mu-en/common-components-strings.json";
+import locale130 from "../../locales/mu-fr/common-components-strings.json";
+import locale131 from "../../locales/mx-en/common-components-strings.json";
+import locale132 from "../../locales/mx-es/common-components-strings.json";
+import locale133 from "../../locales/my-en/common-components-strings.json";
+import locale134 from "../../locales/my-zh/common-components-strings.json";
+import locale135 from "../../locales/nl-en/common-components-strings.json";
+import locale136 from "../../locales/nl-nl/common-components-strings.json";
+import locale137 from "../../locales/no-en/common-components-strings.json";
+import locale138 from "../../locales/no-no/common-components-strings.json";
+import locale139 from "../../locales/np-en/common-components-strings.json";
+import locale140 from "../../locales/np-ne/common-components-strings.json";
+import locale141 from "../../locales/nz-en/common-components-strings.json";
+import locale142 from "../../locales/om-ar/common-components-strings.json";
+import locale143 from "../../locales/om-en/common-components-strings.json";
+import locale144 from "../../locales/pa-en/common-components-strings.json";
+import locale145 from "../../locales/pa-es/common-components-strings.json";
+import locale146 from "../../locales/pe-en/common-components-strings.json";
+import locale147 from "../../locales/pe-es/common-components-strings.json";
+import locale148 from "../../locales/ph-en/common-components-strings.json";
+import locale149 from "../../locales/pl-en/common-components-strings.json";
+import locale150 from "../../locales/pl-pl/common-components-strings.json";
+import locale151 from "../../locales/pt-en/common-components-strings.json";
+import locale152 from "../../locales/pt-pt/common-components-strings.json";
+import locale153 from "../../locales/py-en/common-components-strings.json";
+import locale154 from "../../locales/py-es/common-components-strings.json";
+import locale155 from "../../locales/ro-en/common-components-strings.json";
+import locale156 from "../../locales/ro-ro/common-components-strings.json";
+import locale157 from "../../locales/rs-en/common-components-strings.json";
+import locale158 from "../../locales/rs-sr/common-components-strings.json";
+import locale159 from "../../locales/sa-ar/common-components-strings.json";
+import locale160 from "../../locales/sa-en/common-components-strings.json";
+import locale161 from "../../locales/se-en/common-components-strings.json";
+import locale162 from "../../locales/se-sv/common-components-strings.json";
+import locale163 from "../../locales/si-en/common-components-strings.json";
+import locale164 from "../../locales/si-sl/common-components-strings.json";
+import locale165 from "../../locales/sk-en/common-components-strings.json";
+import locale166 from "../../locales/sk-sk/common-components-strings.json";
+import locale167 from "../../locales/sm-en/common-components-strings.json";
+import locale168 from "../../locales/sm-it/common-components-strings.json";
+import locale169 from "../../locales/th-en/common-components-strings.json";
+import locale170 from "../../locales/th-th/common-components-strings.json";
+import locale171 from "../../locales/tr-en/common-components-strings.json";
+import locale172 from "../../locales/tr-tr/common-components-strings.json";
+import locale173 from "../../locales/ua-en/common-components-strings.json";
+import locale174 from "../../locales/ua-ru/common-components-strings.json";
+import locale175 from "../../locales/ua-uk/common-components-strings.json";
+import locale176 from "../../locales/uy-en/common-components-strings.json";
+import locale177 from "../../locales/uy-es/common-components-strings.json";
+import locale178 from "../../locales/vn-en/common-components-strings.json";
+import locale179 from "../../locales/vn-vi/common-components-strings.json";
+import locale180 from "../../locales/za-en/common-components-strings.json";
+import locale181 from "../../locales/zm-en/common-components-strings.json";
+import locale182 from "../../locales/zw-en/common-components-strings.json";
+import locale183 from "../../locales/zz-en/common-components-strings.json";
+
+export const commonComponentStrings: StringsByLocale = {
+  "ad-ca": locale0 as LocaleStrings,
+  "ad-en": locale1 as LocaleStrings,
+  "ad-es": locale2 as LocaleStrings,
+  "ae-ar": locale3 as LocaleStrings,
+  "ae-en": locale4 as LocaleStrings,
+  "al-en": locale5 as LocaleStrings,
+  "al-sq": locale6 as LocaleStrings,
+  "am-en": locale7 as LocaleStrings,
+  "am-hy": locale8 as LocaleStrings,
+  "ar-en": locale9 as LocaleStrings,
+  "ar-es": locale10 as LocaleStrings,
+  "at-de": locale11 as LocaleStrings,
+  "at-en": locale12 as LocaleStrings,
+  "au-en": locale13 as LocaleStrings,
+  "az-az": locale14 as LocaleStrings,
+  "az-en": locale15 as LocaleStrings,
+  "az-ru": locale16 as LocaleStrings,
+  "ba-bs": locale17 as LocaleStrings,
+  "ba-en": locale18 as LocaleStrings,
+  "ba-hr": locale19 as LocaleStrings,
+  "be-en": locale20 as LocaleStrings,
+  "be-fr": locale21 as LocaleStrings,
+  "be-nl": locale22 as LocaleStrings,
+  "bg-bg": locale23 as LocaleStrings,
+  "bg-en": locale24 as LocaleStrings,
+  "bh-de": locale25 as LocaleStrings,
+  "bh-en": locale26 as LocaleStrings,
+  "bo-en": locale27 as LocaleStrings,
+  "bo-es": locale28 as LocaleStrings,
+  "br-en": locale29 as LocaleStrings,
+  "br-pt": locale30 as LocaleStrings,
+  "bt-dz": locale31 as LocaleStrings,
+  "bt-en": locale32 as LocaleStrings,
+  "bw-en": locale33 as LocaleStrings,
+  "by-be": locale34 as LocaleStrings,
+  "by-en": locale35 as LocaleStrings,
+  "by-ru": locale36 as LocaleStrings,
+  "ca-en": locale37 as LocaleStrings,
+  "ca-fr": locale38 as LocaleStrings,
+  "ch-de": locale39 as LocaleStrings,
+  "ch-en": locale40 as LocaleStrings,
+  "ch-fr": locale41 as LocaleStrings,
+  "ch-it": locale42 as LocaleStrings,
+  "cl-en": locale43 as LocaleStrings,
+  "cl-es": locale44 as LocaleStrings,
+  "co-en": locale45 as LocaleStrings,
+  "co-es": locale46 as LocaleStrings,
+  "cr-en": locale47 as LocaleStrings,
+  "cr-es": locale48 as LocaleStrings,
+  "cy-el": locale49 as LocaleStrings,
+  "cy-en": locale50 as LocaleStrings,
+  "cy-ru": locale51 as LocaleStrings,
+  "cz-cs": locale52 as LocaleStrings,
+  "cz-en": locale53 as LocaleStrings,
+  "de-de": locale54 as LocaleStrings,
+  "de-en": locale55 as LocaleStrings,
+  "dk-da": locale56 as LocaleStrings,
+  "dk-en": locale57 as LocaleStrings,
+  "do-en": locale58 as LocaleStrings,
+  "do-es": locale59 as LocaleStrings,
+  "ee-en": locale60 as LocaleStrings,
+  "ee-et": locale61 as LocaleStrings,
+  "ee-ru": locale62 as LocaleStrings,
+  "eg-en": locale63 as LocaleStrings,
+  "en": locale64 as LocaleStrings,
+  "es-en": locale65 as LocaleStrings,
+  "es-es": locale66 as LocaleStrings,
+  "eu-en": locale67 as LocaleStrings,
+  "fi-en": locale68 as LocaleStrings,
+  "fi-fi": locale69 as LocaleStrings,
+  "fr-en": locale70 as LocaleStrings,
+  "fr-fr": locale71 as LocaleStrings,
+  "gb-en": locale72 as LocaleStrings,
+  "ge-en": locale73 as LocaleStrings,
+  "ge-ka": locale74 as LocaleStrings,
+  "gl-da": locale75 as LocaleStrings,
+  "gl-en": locale76 as LocaleStrings,
+  "gr-el": locale77 as LocaleStrings,
+  "gr-en": locale78 as LocaleStrings,
+  "hk-en": locale79 as LocaleStrings,
+  "hk-zh": locale80 as LocaleStrings,
+  "hr-en": locale81 as LocaleStrings,
+  "hr-hr": locale82 as LocaleStrings,
+  "hu-en": locale83 as LocaleStrings,
+  "hu-hu": locale84 as LocaleStrings,
+  "id-en": locale85 as LocaleStrings,
+  "ie-en": locale86 as LocaleStrings,
+  "il-en": locale87 as LocaleStrings,
+  "il-he": locale88 as LocaleStrings,
+  "is-en": locale89 as LocaleStrings,
+  "is-is": locale90 as LocaleStrings,
+  "it-en": locale91 as LocaleStrings,
+  "it-it": locale92 as LocaleStrings,
+  "jm-en": locale93 as LocaleStrings,
+  "jo-en": locale94 as LocaleStrings,
+  "jp-en": locale95 as LocaleStrings,
+  "jp-ja": locale96 as LocaleStrings,
+  "kh-en": locale97 as LocaleStrings,
+  "kh-km": locale98 as LocaleStrings,
+  "ks-en": locale99 as LocaleStrings,
+  "ks-sq": locale100 as LocaleStrings,
+  "kw-en": locale101 as LocaleStrings,
+  "la-en": locale102 as LocaleStrings,
+  "la-lo": locale103 as LocaleStrings,
+  "lb-en": locale104 as LocaleStrings,
+  "lt-en": locale105 as LocaleStrings,
+  "lt-lt": locale106 as LocaleStrings,
+  "lt-ru": locale107 as LocaleStrings,
+  "lu-en": locale108 as LocaleStrings,
+  "lu-fr": locale109 as LocaleStrings,
+  "lv-en": locale110 as LocaleStrings,
+  "lv-lv": locale111 as LocaleStrings,
+  "lv-ru": locale112 as LocaleStrings,
+  "ma-en": locale113 as LocaleStrings,
+  "ma-fr": locale114 as LocaleStrings,
+  "mc-en": locale115 as LocaleStrings,
+  "mc-fr": locale116 as LocaleStrings,
+  "md-en": locale117 as LocaleStrings,
+  "md-ro": locale118 as LocaleStrings,
+  "me-en": locale119 as LocaleStrings,
+  "me-sr": locale120 as LocaleStrings,
+  "mk-en": locale121 as LocaleStrings,
+  "mk-mk": locale122 as LocaleStrings,
+  "mm-en": locale123 as LocaleStrings,
+  "mm-my": locale124 as LocaleStrings,
+  "mn-en": locale125 as LocaleStrings,
+  "mt-en": locale126 as LocaleStrings,
+  "mt-it": locale127 as LocaleStrings,
+  "mt-mt": locale128 as LocaleStrings,
+  "mu-en": locale129 as LocaleStrings,
+  "mu-fr": locale130 as LocaleStrings,
+  "mx-en": locale131 as LocaleStrings,
+  "mx-es": locale132 as LocaleStrings,
+  "my-en": locale133 as LocaleStrings,
+  "my-zh": locale134 as LocaleStrings,
+  "nl-en": locale135 as LocaleStrings,
+  "nl-nl": locale136 as LocaleStrings,
+  "no-en": locale137 as LocaleStrings,
+  "no-no": locale138 as LocaleStrings,
+  "np-en": locale139 as LocaleStrings,
+  "np-ne": locale140 as LocaleStrings,
+  "nz-en": locale141 as LocaleStrings,
+  "om-ar": locale142 as LocaleStrings,
+  "om-en": locale143 as LocaleStrings,
+  "pa-en": locale144 as LocaleStrings,
+  "pa-es": locale145 as LocaleStrings,
+  "pe-en": locale146 as LocaleStrings,
+  "pe-es": locale147 as LocaleStrings,
+  "ph-en": locale148 as LocaleStrings,
+  "pl-en": locale149 as LocaleStrings,
+  "pl-pl": locale150 as LocaleStrings,
+  "pt-en": locale151 as LocaleStrings,
+  "pt-pt": locale152 as LocaleStrings,
+  "py-en": locale153 as LocaleStrings,
+  "py-es": locale154 as LocaleStrings,
+  "ro-en": locale155 as LocaleStrings,
+  "ro-ro": locale156 as LocaleStrings,
+  "rs-en": locale157 as LocaleStrings,
+  "rs-sr": locale158 as LocaleStrings,
+  "sa-ar": locale159 as LocaleStrings,
+  "sa-en": locale160 as LocaleStrings,
+  "se-en": locale161 as LocaleStrings,
+  "se-sv": locale162 as LocaleStrings,
+  "si-en": locale163 as LocaleStrings,
+  "si-sl": locale164 as LocaleStrings,
+  "sk-en": locale165 as LocaleStrings,
+  "sk-sk": locale166 as LocaleStrings,
+  "sm-en": locale167 as LocaleStrings,
+  "sm-it": locale168 as LocaleStrings,
+  "th-en": locale169 as LocaleStrings,
+  "th-th": locale170 as LocaleStrings,
+  "tr-en": locale171 as LocaleStrings,
+  "tr-tr": locale172 as LocaleStrings,
+  "ua-en": locale173 as LocaleStrings,
+  "ua-ru": locale174 as LocaleStrings,
+  "ua-uk": locale175 as LocaleStrings,
+  "uy-en": locale176 as LocaleStrings,
+  "uy-es": locale177 as LocaleStrings,
+  "vn-en": locale178 as LocaleStrings,
+  "vn-vi": locale179 as LocaleStrings,
+  "za-en": locale180 as LocaleStrings,
+  "zm-en": locale181 as LocaleStrings,
+  "zw-en": locale182 as LocaleStrings,
+  "zz-en": locale183 as LocaleStrings,
+};
+

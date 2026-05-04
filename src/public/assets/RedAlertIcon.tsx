@@ -1,0 +1,22 @@
+import React from "react";
+
+function RedAlertIcon() {
+  return (
+    <div>
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 12 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 12C2.68629 12 0 9.31368 0 6C0 2.68629 2.68629 0 6 0C9.31368 0 12 2.68629 12 6C12 9.31368 9.31368 12 6 12ZM5.4 7.8V9H6.6V7.8H5.4ZM5.4 3V6.6H6.6V3H5.4Z"
+          fill="#FC5247"
+        />
+      </svg>
+    </div>
+  );
+}
+
+export default RedAlertIcon;

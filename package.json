@@ -1,0 +1,150 @@
+{
+  "name": "bx-ui-components",
+  "version": "0.1.0",
+  "description": "Reusable BX React/Next.js UI components with shared styles and component-owned locale strings.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "locales",
+    "tailwind.config.cjs",
+    "tailwind.preset.cjs",
+    "README.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles/styles.css",
+    "./button": {
+      "types": "./dist/ui/button.d.ts",
+      "import": "./dist/ui/button.js",
+      "require": "./dist/ui/button.cjs"
+    },
+    "./input": {
+      "types": "./dist/ui/input.d.ts",
+      "import": "./dist/ui/input.js",
+      "require": "./dist/ui/input.cjs"
+    },
+    "./table": {
+      "types": "./dist/ui/table.d.ts",
+      "import": "./dist/ui/table.js",
+      "require": "./dist/ui/table.cjs"
+    },
+    "./base-table": {
+      "types": "./dist/components/course/findCourse/BaseTable.d.ts",
+      "import": "./dist/components/course/findCourse/BaseTable.js",
+      "require": "./dist/components/course/findCourse/BaseTable.cjs"
+    },
+    "./ui/*": {
+      "types": "./dist/ui/*.d.ts",
+      "import": "./dist/ui/*.js",
+      "require": "./dist/ui/*.cjs"
+    },
+    "./tailwind-preset": "./tailwind.preset.cjs",
+    "./locales/*": "./locales/*"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "pack:local": "npm pack"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "react-hook-form": ">=7"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "1.2.0",
+    "@radix-ui/react-alert-dialog": "1.0.5",
+    "@radix-ui/react-avatar": "1.0.4",
+    "@radix-ui/react-checkbox": "1.0.4",
+    "@radix-ui/react-dialog": "1.0.5",
+    "@radix-ui/react-dropdown-menu": "2.0.6",
+    "@radix-ui/react-hover-card": "1.0.7",
+    "@radix-ui/react-icons": "1.3.0",
+    "@radix-ui/react-label": "2.0.2",
+    "@radix-ui/react-navigation-menu": "1.1.4",
+    "@radix-ui/react-popover": "1.0.7",
+    "@radix-ui/react-radio-group": "1.1.3",
+    "@radix-ui/react-scroll-area": "1.0.5",
+    "@radix-ui/react-select": "2.0.0",
+    "@radix-ui/react-separator": "1.0.3",
+    "@radix-ui/react-slot": "1.0.2",
+    "@radix-ui/react-switch": "1.1.1",
+    "@radix-ui/react-tabs": "1.0.4",
+    "@radix-ui/react-tooltip": "1.0.7",
+    "@tanstack/react-table": "8.16.0",
+    "@tiptap/core": "2.10.2",
+    "@tiptap/extension-character-count": "2.10.2",
+    "@tiptap/extension-color": "2.10.2",
+    "@tiptap/extension-image": "2.10.2",
+    "@tiptap/extension-link": "2.10.2",
+    "@tiptap/extension-text-align": "2.10.2",
+    "@tiptap/extension-text-style": "2.10.2",
+    "@tiptap/extension-underline": "2.10.2",
+    "@tiptap/pm": "2.10.2",
+    "@tiptap/react": "2.10.2",
+    "@tiptap/starter-kit": "2.10.2",
+    "class-variance-authority": "0.7.0",
+    "classnames": "2.5.1",
+    "clsx": "2.1.1",
+    "cmdk": "0.2.1",
+    "date-fns": "3.6.0",
+    "dayjs": "1.11.13",
+    "lodash": "4.17.21",
+    "lucide-react": "0.302.0",
+    "prop-types": "15.8.1",
+    "react-day-picker": "8.10.1",
+    "react-toastify": "10.0.5",
+    "recharts": "2.15.4",
+    "tailwind-merge": "2.3.0",
+    "zustand": "4.5.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "8.4.6",
+    "@storybook/addon-interactions": "8.4.6",
+    "@storybook/addon-links": "8.4.6",
+    "@storybook/blocks": "8.4.6",
+    "@storybook/nextjs": "8.4.6",
+    "@storybook/react": "8.4.6",
+    "@storybook/test": "8.4.6",
+    "@babel/core": "7.26.0",
+    "@types/lodash": "4.17.1",
+    "@types/node": "18.19.32",
+    "@types/prop-types": "15.7.12",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0",
+    "ajv": "8.17.1",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "next": "13.5.6",
+    "postcss": "8.4.38",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.51.4",
+    "rimraf": "5.0.10",
+    "storybook": "8.4.6",
+    "tailwindcss": "3.4.3",
+    "tailwindcss-animate": "1.0.7",
+    "tsup": "8.3.5",
+    "typescript": "5.6.3"
+  }
+}
