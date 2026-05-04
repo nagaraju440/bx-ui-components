@@ -1,6 +1,6 @@
 {
   "name": "bx-ui-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable BX React/Next.js UI components with shared styles and component-owned locale strings.",
   "license": "MIT",
   "type": "module",
