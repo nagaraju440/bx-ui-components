@@ -3,6 +3,9 @@ import "../src/styles/styles.css";
 
 const preview: Preview = {
   parameters: {
+    actions: {
+      argTypesRegex: "^on.*"
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

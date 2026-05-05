@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useEffect, useState } from "react";
-import { useForm, FormProvider } from "react-hook-form";
 import { VerticalBarChart as DiscountBarChart } from "src/ui/bar-chart";
-import { CourseDiscountCodeInput } from "src/ui/CourseDiscountCodeInput";
-import { DiscountCodeInput } from "src/ui/DiscountCodeInput";
 import { MultiLingualSupportInputs } from "src/ui/MultiLingualInputs";
 import TipTapEditor from "src/ui/TiptapEditor";
 import { TipTapToolbar } from "src/ui/TipTapToolbar";
@@ -98,67 +95,6 @@ const configureBusinessMocks = () => {
   ParticipantStore.getState().SetIsDiscountCodeApplied("open");
 };
 
-const DiscountInputExample = ({
-  type = "manual",
-}: {
-  type?: "manual" | "course";
-}) => {
-  const form = useForm({
-    defaultValues: {
-      program_data: {
-        id: 1,
-        org_product: {
-          is_reduced_fee_enabled: true,
-        },
-      },
-      fee_level_id: 10,
-      fee_level_obj: {
-        fee_level: "regular",
-        org_product_fee_level_config_id: 10,
-      },
-      org_product_fee_level_config: [
-        {
-          id: 10,
-          max_discount_percentage: 20,
-        },
-      ],
-      contact_obj: {
-        email: "participant@example.com",
-        user_preference: {
-          communication_preferences: {
-            preferred_language: {
-              code: "en",
-            },
-          },
-        },
-      },
-      registration_date: new Date().toISOString(),
-      course_fee: 250,
-      discounted_amount: 40,
-    },
-  });
-  const [value, setValue] = useState("SAVE20");
-
-  useEffect(() => {
-    configureBusinessMocks();
-  }, []);
-
-  const Component =
-    type === "course" ? CourseDiscountCodeInput : DiscountCodeInput;
-
-  return (
-    <FormProvider {...form}>
-      <div className="w-[460px] rounded-lg border bg-white p-5">
-        <Component
-          value={value}
-          onChange={setValue}
-          getData={() => {}}
-        />
-      </div>
-    </FormProvider>
-  );
-};
-
 export const Charts: Story = {
   render: () => (
     <div className="grid w-[820px] gap-6">
@@ -231,15 +167,6 @@ export const MultiLingualInputs: Story = {
       />
     );
   },
-};
-
-export const DiscountCodeInputs: Story = {
-  render: () => (
-    <div className="space-y-5">
-      <DiscountInputExample />
-      <DiscountInputExample type="course" />
-    </div>
-  ),
 };
 
 export const TipTapToolbarReference: Story = {
