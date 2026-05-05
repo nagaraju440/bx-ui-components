@@ -26,29 +26,29 @@
     },
     "./styles.css": "./dist/styles/styles.css",
     "./button": {
-      "types": "./dist/ui/button.d.ts",
-      "import": "./dist/ui/button.js",
-      "require": "./dist/ui/button.cjs"
+      "types": "./dist/ui/button/index.d.ts",
+      "import": "./dist/ui/button/index.js",
+      "require": "./dist/ui/button/index.cjs"
     },
     "./input": {
-      "types": "./dist/ui/input.d.ts",
-      "import": "./dist/ui/input.js",
-      "require": "./dist/ui/input.cjs"
+      "types": "./dist/ui/input/index.d.ts",
+      "import": "./dist/ui/input/index.js",
+      "require": "./dist/ui/input/index.cjs"
     },
     "./table": {
-      "types": "./dist/ui/table.d.ts",
-      "import": "./dist/ui/table.js",
-      "require": "./dist/ui/table.cjs"
+      "types": "./dist/ui/table/index.d.ts",
+      "import": "./dist/ui/table/index.js",
+      "require": "./dist/ui/table/index.cjs"
     },
     "./base-table": {
-      "types": "./dist/components/course/findCourse/BaseTable.d.ts",
-      "import": "./dist/components/course/findCourse/BaseTable.js",
-      "require": "./dist/components/course/findCourse/BaseTable.cjs"
+      "types": "./dist/ui/base-table/index.d.ts",
+      "import": "./dist/ui/base-table/index.js",
+      "require": "./dist/ui/base-table/index.cjs"
     },
     "./ui/*": {
-      "types": "./dist/ui/*.d.ts",
-      "import": "./dist/ui/*.js",
-      "require": "./dist/ui/*.cjs"
+      "types": "./dist/ui/*/index.d.ts",
+      "import": "./dist/ui/*/index.js",
+      "require": "./dist/ui/*/index.cjs"
     },
     "./tailwind-preset": "./tailwind.preset.cjs",
     "./locales/*": "./locales/*"

@@ -8,7 +8,7 @@ interface IconComponentPropType {
 const CrossIcon = ({
   width = 20,
   height = 19,
-  // fill = "#7677F4",
+  fill = "currentColor",
   className = "",
 }: IconComponentPropType) => {
   return (
@@ -25,7 +25,7 @@ const CrossIcon = ({
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={"currentColor"}
+        fill={fill}
       />
     </svg>
   );
